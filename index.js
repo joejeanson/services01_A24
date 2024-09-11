@@ -6,12 +6,16 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+
+// Pour aller chercher les données dans le cluster de mongoDB
 mongoose.connect(
 	"mongodb+srv://dbCLG:VI1nxd5R3Qy0pcj4IZFe@cluster0.ub8r2.mongodb.net/labo1"
 );
-// mongoose.connect(
-// 	"mongodb://127.0.0.1:27017/labo01"
-// );
+
+// Pour aller chercher les données dans la DB de mongoDB en local
+/* mongoose.connect(
+	"mongodb://127.0.0.1:27017/labo01"
+); */
 
 const Livres = require("./modeles/Livres");
 

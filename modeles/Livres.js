@@ -16,10 +16,10 @@ let schemaLivre = mongoose.Schema({
 	prix: { type: Number, require: true },
 });
 
-let Livres = module.exports = mongoose.model('livres', schemaLivre);
+let Livres = (module.exports = mongoose.model("livres", schemaLivre));
 
 // Méthodes pour accéder aux données ....
 
 module.exports.getLivres = (callback, maxLivres) => {
-    Livres.find(callback).limit(maxLivres);
+	Livres.find(callback).limit(maxLivres);
 };
